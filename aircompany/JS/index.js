@@ -1,12 +1,12 @@
-const Airport = require('./Airport');
+const Airport = require('./airport');
 
-const MilitaryPlane = require('./planes/MilitaryPlane');
-const PassengerPlane = require('./planes/PassengerPlane');
-const ExperimentalPlane = require('./planes/ExperimentalPlane');
+const MilitaryPlane = require('./Planes/military-plane');
+const PassengerPlane = require('./Planes/passenger-plane');
+const ExperimentalPlane = require('./Planes/experimental-plane');
 
-const CLASSIFICATION_LEVELS = require('./models/classificationLevels');
-const EXPERIMENTAL_TYPES = require('./models/experimentalTypes');
-const MILITARY_TYPES = require('./models/militaryTypes');
+const CLASSIFICATION_LEVELS = require('./models/classification-levels');
+const EXPERIMENTAL_TYPES = require('./models/experimental-types');
+const MILITARY_TYPES = require('./models/military-types');
 
 (() => {
     const planes = [
@@ -34,5 +34,5 @@ const MILITARY_TYPES = require('./models/militaryTypes');
 
     console.log(`Military airport sorted by max distance: ${Airport.print(militaryAirport.sortByMaxDistance())}`);
     console.log(`Passenger airport sorted by max speed: ${Airport.print(passengerAirport.sortByMaxSpeed())}`);
-    console.log(`Plane with max passenger capacity: ${Airport.print(passengerAirport.getPassengerPlaneWithMaxPassengersCapacity())}`);
+    console.log(`Plane with max passenger capacity: ${Airport.print(passengerAirport.getPassengerPlaneWithMaxCapacity())}`);
 })();
